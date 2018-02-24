@@ -12,7 +12,10 @@
   },
   "private": true,
   "dependencies": {
+<<<<<<< HEAD
     "@agm/core": "^1.0.0-beta.2",
+=======
+>>>>>>> d0252e8f7aa01ae4dac7df33390e3cf5b6d63bb0
     "@angular/animations": "^5.2.5",
     "@angular/cdk": "^5.2.1",
     "@angular/common": "^5.2.5",
@@ -26,7 +29,10 @@
     "@angular/router": "^5.2.5",
     "core-js": "^2.4.1",
     "hammerjs": "^2.0.8",
+<<<<<<< HEAD
     "ngx-carousel": "^1.3.5",
+=======
+>>>>>>> d0252e8f7aa01ae4dac7df33390e3cf5b6d63bb0
     "rxjs": "^5.5.2",
     "zone.js": "^0.8.14"
   },

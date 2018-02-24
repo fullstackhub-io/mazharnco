@@ -34,6 +34,7 @@ import {
   MatTooltipModule,
   MatStepperModule
 } from '@angular/material';
+<<<<<<< HEAD
 import { NgxCarouselModule } from 'ngx-carousel';
 
 import { AppComponent } from './app.component';
@@ -56,6 +57,18 @@ import { AppRoutingModule } from "./app-routing.module";
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+=======
+
+import { AppComponent } from './app.component';
+
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,BrowserAnimationsModule,
+>>>>>>> d0252e8f7aa01ae4dac7df33390e3cf5b6d63bb0
     MatButtonModule,
     MatCheckboxModule,
     MatCardModule,
