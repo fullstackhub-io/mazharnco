@@ -1,0 +1,132 @@
+<div class="row">
+  <div class="col-sm-8">
+    <mat-card class="card_size mat-card-noshadow">
+      <mat-card-header class="header">
+        <mat-card-title class="header_title"><i class="material-icons" style="vertical-align: middle">turned_in</i> Welcome to Mazhar & C0.</mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="card_cntnt">
+        <div>
+          <p>CONNECTING YOUR BUSINESS TO THE TECHNOLOGY RESOURCES YOU NEED</p>
+          <p>
+            MMC , a firm of Cost & Management Accountants, provides quality services in the areas of Cost & Financial Accounting, Audit,
+            Tax & Corporate Compliance, Management Consulting, Business Management, Quality Management, Research & Development,
+            performance audit, feasibility reports, PPRA rules, Information Technology Solutions, Website development, anti
+            dumping / antitrust, bridging the gap between investor and businessman, HR policy and any kind of business solution
+            as per requirement of clients.
+          </p>
+        </div>
+        <div>
+          <div class="col-sm-4">
+            <mat-card>
+              <mat-card-header class="subheader">
+                <mat-card-title class="subheader_title"><i class="material-icons icon">visibility</i> Vision</mat-card-title>
+              </mat-card-header>
+              <mat-card-content style="height: 160px" class="card_cntnt">
+                To add the value in the business to make it competent both at national and international level.
+              </mat-card-content>
+            </mat-card>
+          </div>
+          <div class="col-sm-4">
+            <mat-card>
+              <mat-card-header class="subheader">
+                <mat-card-title class="subheader_title"><i class="material-icons icon">brightness_auto</i> Values</mat-card-title>
+              </mat-card-header>
+              <mat-card-content style="height: 160px" class="card_cntnt">
+                Respect, honesty, customer satisfaction and team work at both within and out side the organization is our core value.
+              </mat-card-content>
+            </mat-card>
+          </div>
+          <div class="col-sm-4">
+            <mat-card>
+              <mat-card-header class="subheader">
+                <mat-card-title class="subheader_title"><i class="material-icons icon">my_location</i> Mission</mat-card-title>
+              </mat-card-header>
+              <mat-card-content style="height: 160px" class="card_cntnt">
+                To induce the business community to adopt the culture of using the IT based Financial and Accounting information for enhancing
+                their capabilities regarding economy, efficiently & effectiveness.
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div class="col-sm-4">
+    <div>
+      <mat-card>
+        <mat-card-header class="header">
+          <mat-card-title class="header_title"><i class="material-icons">&#xE0E5;</i> Latest News</mat-card-title>
+        </mat-card-header>
+        <mat-card-content class="card_cntnt card_cntnt_scoll" >
+          <div>
+            <ul>
+              <li>Download Community Entrepreneurship Economic Model (CEEM)<a href="http://www.mazharnco.com/Executive_Summary.pdf"> <i style="vertical-align: bottom" class="material-icons">file_download</i></a>
+              <li>Check Client Work Status (coming soon)
+              <li>Download Community Entrepreneurship Economic Model (CEEM)<a href="http://www.mazharnco.com/Executive_Summary.pdf"> <i style="vertical-align: bottom" class="material-icons">file_download</i></a>
+            </ul>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div style="padding-top: 35px;">
+      <mat-card>
+        <mat-card-header class="header">
+          <mat-card-title class="header_title"><i class="material-icons">rate_review</i> Clients Reviews</mat-card-title>
+        </mat-card-header>
+        <mat-card-content style="height: 165px">
+          <div class="slider">
+            <input type="radio" name="slider" title="slide1" checked="checked" class="slider__nav" />
+            <input type="radio" name="slider" title="slide2" class="slider__nav" />
+            <input type="radio" name="slider" title="slide3" class="slider__nav" />
+            <input type="radio" name="slider" title="slide4" class="slider__nav" />
+            <div class="slider__inner">
+              <div class="slider__contents">
+                <h2 class="slider__caption">codepen</h2>
+                <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis possimus illo quos, corporis
+                  minima!
+                </p>
+              </div>
+              <div class="slider__contents">
+                <h2 class="slider__caption">newspaper-o</h2>
+                <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis possimus illo quos, corporis
+                  minima!
+                </p>
+              </div>
+              <div class="slider__contents">
+                <h2 class="slider__caption">television</h2>
+                <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis possimus illo quos, corporis
+                  minima!
+                </p>
+              </div>
+              <div class="slider__contents">
+                <h2 class="slider__caption">diamond</h2>
+                <p class="slider__txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. At cupiditate omnis possimus illo quos, corporis
+                  minima!
+                </p>
+              </div>
+            </div>
+          </div>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
+</div>
+<div class="clearfix" style="padding-bottom: 30px"></div>
+<div>
+  <mat-card>
+    <mat-card-header class="header">
+      <div mat-card-avatar class="clnt_img"></div>
+      <mat-card-title class="header_title">Our Client</mat-card-title>
+    </mat-card-header>
+    <ngx-carousel [inputs]="carouselTile">
+      <ngx-tile NgxCarouselItem *ngFor="let Tile of carouselTileItems" style="text-align: center;">
+        <img [src]='Tile.url' class="carsoul_img" />
+        <div class="clients_slider"><a target="_blank" href='{{Tile.web}}'><i style="vertical-align: bottom" class="material-icons">&#xE80B;</i></a>          {{Tile.name}}</div>
+        <div class="clients_slider">Service: <b> {{Tile.work}}</b></div>
+      </ngx-tile>
+      <span NgxCarouselPrev></span>
+      <span NgxCarouselNext></span>
+    </ngx-carousel>
+  </mat-card>
+</div>
