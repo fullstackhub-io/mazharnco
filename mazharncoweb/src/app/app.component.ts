@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { Component, OnInit } from '@angular/core';
 import { NgxCarousel, NgxCarouselStore } from 'ngx-carousel';
 import { MouseEvent } from '@agm/core';
@@ -9,16 +8,12 @@ interface marker {
   label?: string;
   draggable: boolean;
 }
-=======
-import { Component } from '@angular/core';
->>>>>>> d0252e8f7aa01ae4dac7df33390e3cf5b6d63bb0
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-<<<<<<< HEAD
 
 export class AppComponent implements OnInit {
 
@@ -80,8 +75,4 @@ export class AppComponent implements OnInit {
     }
   }
 
-=======
-export class AppComponent {
-  title = 'app';
->>>>>>> d0252e8f7aa01ae4dac7df33390e3cf5b6d63bb0
 }
