@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {
   MatAutocompleteModule,
   MatButtonModule,
@@ -34,21 +35,26 @@ import {
   MatTooltipModule,
   MatStepperModule
 } from '@angular/material';
-import { NgxCarouselModule } from 'ngx-carousel';
 
 import { AppComponent } from './app.component';
 import 'hammerjs';
 
 import { AgmCoreModule } from '@agm/core';
+import { NgxCarouselModule } from 'ngx-carousel';
+
 import { HomeComponent } from './client/home/home.component';
 import { AppRoutingModule } from "./app-routing.module";
+import { ContactComponent } from './client/contact/contact.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    ContactComponent
   ],
   imports: [
+    FormsModule, 
+    ReactiveFormsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCKHGctDoGx1_YdAbRsPlJYQqlQeC6kR2E'
     }),
