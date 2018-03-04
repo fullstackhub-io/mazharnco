@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+
 import {
   MatAutocompleteModule,
   MatButtonModule,
@@ -45,6 +47,8 @@ import { NgxCarouselModule } from 'ngx-carousel';
 import { HomeComponent } from './client/home/home.component';
 import { AppRoutingModule } from "./app-routing.module";
 import { ContactComponent } from './client/contact/contact.component';
+import { DataService } from './service/data/data.service';
+import { Util } from "./shared/util";
 
 @NgModule({
   declarations: [
@@ -53,7 +57,7 @@ import { ContactComponent } from './client/contact/contact.component';
     ContactComponent
   ],
   imports: [
-    FormsModule, 
+    FormsModule,
     ReactiveFormsModule,
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyCKHGctDoGx1_YdAbRsPlJYQqlQeC6kR2E'
@@ -82,8 +86,9 @@ import { ContactComponent } from './client/contact/contact.component';
     MatExpansionModule,
     MatTooltipModule,
     MatSlideToggleModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [DataService,Util],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

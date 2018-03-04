@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
+import { DataService } from "../../service/data/data.service";
+import { Util } from "../../shared/util";
 
 @Component({
   selector: 'app-contact',
@@ -8,9 +10,11 @@ import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 })
 export class ContactComponent implements OnInit {
   
+  POST_CONTACT:string ="/api/contact";
+
   contactFrm: FormGroup;
 
-  constructor(private _fb: FormBuilder) { }
+  constructor(private _fb: FormBuilder,private _dataService:DataService,private _util:Util) { }
 
   ngOnInit() {
 
@@ -24,19 +28,19 @@ export class ContactComponent implements OnInit {
   }
 
   onSubmit(formData: any) {
-   /*  delete formData.value._id;
-    this._dataService.post(this.POST_URL,formData.value,false).subscribe(
+     delete formData.value._id;
+    this._dataService.post(this.POST_CONTACT,formData.value).subscribe(
       data => {
           if (data.success == true) //Success
           {
             this._util.openSnackBar(data.msg,"Success");
           }
           else {
-            this._util.openSnackBar(JSON.stringify(data.msg),"Error");
+           this._util.openSnackBar(JSON.stringify(data.msg),"Error");
           }
       },
       error => {
-      }); */
+      }); 
   }
 
   resetFrm()
