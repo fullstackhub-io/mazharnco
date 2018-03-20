@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+//Http Module For GET, POST, PUT and DELETE RESTful APIs
 import { HttpModule } from '@angular/http';
 
 import {
@@ -57,6 +58,7 @@ import { Util } from "./shared/util";
     ContactComponent
   ],
   imports: [
+    HttpModule,
     FormsModule,
     ReactiveFormsModule,
     AgmCoreModule.forRoot({
@@ -85,8 +87,7 @@ import { Util } from "./shared/util";
     MatProgressBarModule,
     MatExpansionModule,
     MatTooltipModule,
-    MatSlideToggleModule,
-    HttpModule
+    MatSlideToggleModule
   ],
   providers: [DataService,Util],
   bootstrap: [AppComponent]

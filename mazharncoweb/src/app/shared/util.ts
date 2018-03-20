@@ -12,5 +12,4 @@ export class Util {
             duration: dur,
         });
     }
-
 }
