@@ -1,7 +1,7 @@
 
 # Mazharncoweb
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.4.
+Read the Article on [Fullstack Hub](https://fullstackhub.io/viewArticle/5a9c5027184fff2828b5f67d).
 
 ## Development server
 
