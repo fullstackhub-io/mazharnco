@@ -21,4 +21,4 @@ Once ng build command is successfully completed, copy the `dist` folder content 
 
 ## Run the Application
 
-Run the command: pm2 start, open the browser and enter the URL (http://localhost:3000).
+Run the command: `pm2 start environment.json --env production`, open the browser and enter the URL (http://localhost:3000).
