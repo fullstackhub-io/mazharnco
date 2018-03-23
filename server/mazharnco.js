@@ -21,8 +21,8 @@ var app = express();
 app.engine('html', require('ejs').renderFile);
 app.use(express.static(path.join(__dirname, './views')));
 
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 app.use(cors());
 app.use("/api", contacts);
 
