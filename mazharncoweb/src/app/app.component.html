@@ -1,0 +1,142 @@
+<div class="main_div">
+  <mat-grid-list cols="10" rowHeight="2:1">
+    <div>
+      <mat-grid-tile>
+        <div style="padding-left: 5px;">
+          <img src='assets/images/logo1.png' class="mnc-logo" />
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]=8>
+        <div class="socail_btn_padding">
+          <img src="assets/images/fb_btn1.jpg" class="socail_btn image" />
+          <img src="assets/images/skype_btn1.jpg" class="socail_btn image" />
+          <img src="assets/images/twtr_btn1.jpg" class="socail_btn image" />
+          <img src="assets/images/lkdin_btn1.jpg" class="socail_btn image" />
+        </div>
+      </mat-grid-tile>
+      <mat-grid-tile [colspan]=1>
+        <div style="text-align: left">
+          <img src="assets/images/login_btn.png" class="lgn_btn image" />
+        </div>
+      </mat-grid-tile>
+    </div>
+    <mat-grid-tile [colspan]=10 [rowspan]=3>
+      <ngx-carousel [inputs]="carouselBanner" [moveToSlide]="1">
+        <ngx-item NgxCarouselItem>
+          <div><img src='assets/images/banner_1.jpg' width="100%" /></div>
+        </ngx-item>
+
+        <ngx-item NgxCarouselItem>
+          <div><img src='assets/images/banner_2.jpg' width="100%" /></div>
+        </ngx-item>
+        <button NgxCarouselPrev>&lt;</button>
+        <button NgxCarouselNext>&gt;</button>
+      </ngx-carousel>
+    </mat-grid-tile>
+  </mat-grid-list>
+  <div>
+    <nav class="navbar navbar-default" style="box-shadow: 5px 5px 8px #bfc4cc;">
+      <div class="container-fluid">
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="#">Home</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Management Consulting</a></li>
+                <li><a href="#">Information Technology Solutions</a></li>
+                <li><a href="#">Tax Compilance</a></li>
+                <li><a href="#">Corporate Compilance</a></li>
+                <li><a href="#">ISO Quality Services</a></li>
+                <li><a href="#">Pre-Job Training</a></li>
+                <li><a href="#">On-Job Training</a></li>
+                <li><a href="#">Audit</a></li>
+                <li><a href="#">Application Management</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Our Clients</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Our Team</a></li>
+              </ul>
+            </li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <form class="navbar-form navbar-left">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search">
+              </div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+          </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+      </div>
+      <!-- /.container-fluid -->
+    </nav>
+  </div>
+  <div class="clearfix" style="padding-top:10px; padding-bottom: 10px">
+    <router-outlet></router-outlet>
+  </div>
+
+  <div style="padding-top: 30px">
+    <!-- 33.593742, 73.050849 -->
+    <!-- AIzaSyCKHGctDoGx1_YdAbRsPlJYQqlQeC6kR2E -->
+    <mat-card>
+      <mat-card-header class="header">
+        <div mat-card-avatar class="vst_img"></div>
+        <mat-card-title class="header_title">Visit Us</mat-card-title>
+      </mat-card-header>
+      <mat-card-content class="address_card_content">
+        <div class="address_card_content_div">
+          <div class="col-md-6">
+            <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false">
+              <agm-marker *ngFor="let m of markers; let i = index"  [latitude]="m.lat" [longitude]="m.lng"
+                [label]="m.label">
+                <agm-info-window>
+                  <strong>Mazhar & Co. Office # 19, First Floor, Mall Plaza, Mall Road                                                                                    
+                  Rawalpindi, Pakistan  </strong>
+                </agm-info-window>
+              </agm-marker>
+            </agm-map>
+          </div>
+          <div class="col-md-1"></div>
+          <div class="col-md-5 address">
+            Email:<a href="mailto:mazhar_rawalpindi@yahoo.com"> mazhar_rawalpindi@yahoo.com</a>
+            <br>Website: <a href="http://www.mazharnco.com"> www.mazharnco.com</a>
+            <br> Skype: <a href="skype:plug-shop?mazharmahmood786"> mazharmahmood786</a> 
+            <br> Cell: <a href="tel:+92 333 5104584"> +92 333 5104584</a>
+            <br> Tel: <a href="tel:+92 51 5680138"> +92 51 5680138</a> & <a href="tel:+92 51 2291858"> +92 51 2291858</a> <br>
+            <hr><b> Head Office:</b> 
+            <br> Office # 19, First Floor, Mall Plaza, Mall Road 
+            <br> Rawalpindi, Pakistan 
+            <br> Tel & Fax:
+            <a href="tel:+92 51 5562241"> +92 51 5562241 </a><br>
+            <hr><b> Branch office: </b>
+            <br> H # 24, St # 54, F-11/3
+            <br> Islamabad, Pakistan 
+            <br> Tel: <a href="tel:+92 51 2291858"> +92 51 2291858</a><br>
+          </div>
+        </div>
+      </mat-card-content>
+      <mat-card-actions class="main_footer">
+        <div>
+          <div>
+             © 2018 Mazhar & Co. All Rights Reserved.
+            <button mat-button>Privacy Policy</button>
+            <button mat-button>Contact Us</button>
+          </div>
+          <div class="main_footer_cred">
+            Designed and Developed by <a style="color:#bfc4cc" href="https://fullstackhub.io" target="_blank"> Fullstack Hub</a>
+          </div>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  <br>
+</div>
