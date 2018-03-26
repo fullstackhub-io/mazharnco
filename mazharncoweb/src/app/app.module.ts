@@ -50,12 +50,14 @@ import { AppRoutingModule } from "./app-routing.module";
 import { ContactComponent } from './client/contact/contact.component';
 import { DataService } from './service/data/data.service';
 import { Util } from "./shared/util";
+import { ViewPageComponent } from './client/view-page/view-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ContactComponent
+    ContactComponent,
+    ViewPageComponent
   ],
   imports: [
     HttpModule,
