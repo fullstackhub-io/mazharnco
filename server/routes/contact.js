@@ -8,7 +8,7 @@ router.post('/contact', function (req, res) {
       if (error) {
         res.json({ success: false, msg: error });
       } else {
-        res.json({ success: true, msg: "Thank you for contacting, we will get you back soon!" });
+        res.json({ success: true, msg: "Thank you for contacting, we will get to you back soon!" });
       }
     }
   );
