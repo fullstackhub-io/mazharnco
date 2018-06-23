@@ -1,0 +1,91 @@
+<div>
+  <form novalidate (ngSubmit)="onSubmit(contactFrm)" [formGroup]="contactFrm">
+    <mat-card>
+      <mat-card-header class="header">
+        <mat-card-title class="header_title"><i class="material-icons icon_align">contact_mail</i> Contact Us for any Inquiry</mat-card-title>
+      </mat-card-header>
+      <mat-card-content style="height: 335px;" class="card_cntnt">
+        <div class="col-sm-7">
+          <div>
+            <mat-form-field class="frm-ctrl">
+              <input matInput placeholder="Full Name" formControlName="Name">
+              <mat-error *ngIf="contactFrm.controls['Name'].errors?.required">
+                Name is required!
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="frm-ctrl">
+              <input matInput placeholder="Email Address" formControlName="EmailAddress">
+              <mat-error *ngIf="contactFrm.controls['EmailAddress'].errors?.required">
+                Email is required!
+              </mat-error>
+              <mat-error *ngIf="contactFrm.controls['EmailAddress'].errors?.email">
+                Please enter a valid email address!
+              </mat-error>
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="frm-ctrl">
+              <input matInput placeholder="Phone Number" formControlName="Phone">
+              <mat-error *ngIf="contactFrm.controls['Phone'].errors?.required">
+                Phone # is required!
+              </mat-error>
+              <!--   <mat-error *ngIf="contactFrm.controls['EmailAddress'].errors?.email">
+                        Please enter a valid phone number!
+                      </mat-error> -->
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-form-field class="frm-ctrl">
+              <textarea rows="5" matInput placeholder="Message" formControlName="Message"></textarea>
+              <mat-error *ngIf="contactFrm.controls['Message'].errors?.required">
+                Message is required!
+              </mat-error>
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="col-sm-5">
+          <mat-card>
+            <mat-card-header class="subheader">
+              <mat-card-title class="subheader_title"><i class="material-icons icon_align">contact_phone</i> Contact By Phone</mat-card-title>
+            </mat-card-header>
+            <mat-card-content style="height: 160px;" class="card_cntnt">
+              <div class="col-sm-12">
+                <div class="col-sm-6"><i class="material-icons icon_align">phone</i>
+                  <a href="tel:+92 333 5104584"> +92 333 5104584</a>
+                </div>
+                <div class="phone_cntnt  col-sm-6">Mazhar Mahmood, CEO</div>
+              </div>
+              <div class="clearfix" style="padding-bottom: 5px"></div>
+              <div class="col-sm-12">
+                <div class="col-sm-6"><i class="material-icons icon_align">phone</i>
+                  <a href="tel:+92 333 5104584"> +92 333 5104584</a>
+                </div>
+                <div class="phone_cntnt  col-sm-6">John Doe, HR</div>
+              </div>
+              <div class="clearfix" style="padding-bottom: 5px"></div>
+              <div class="col-sm-12">
+                <div class="col-sm-6"><i class="material-icons icon_align">phone</i>
+                  <a href="tel:+92 333 5104584"> +92 333 5104584</a>
+                </div>
+                <div class="phone_cntnt  col-sm-6">Steve Ric, Sales</div>
+              </div>
+              <div class="clearfix" style="padding-bottom: 5px"></div>
+              <div class="col-sm-12">
+                <div class="col-sm-6"><i class="material-icons icon_align">phone</i>
+                  <a href="tel:+92 333 5104584"> +92 333 5104584</a>
+                </div>
+                <div class="phone_cntnt  col-sm-6">Jhon D., Help Desk</div>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </mat-card-content>
+      <mat-card-actions style="padding-bottom: 10px" class="card_footer">
+        <button color="warn" type="button" (click)="resetFrm()" mat-raised-button>Reset</button>&nbsp;
+        <button type="submit" color="primary" [disabled]="contactFrm.invalid" mat-raised-button>Send Message</button>
+      </mat-card-actions>
+    </mat-card>
+  </form>
+</div>

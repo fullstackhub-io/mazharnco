@@ -1,0 +1,25 @@
+{
+    "apps": [
+        {
+            "name": "mazharnco",
+            "script": "./mazharnco.js",
+            "watch": true,
+            "env": {
+                "NODE_ENV": "development",
+                "ADMIN_EMAIL":"fullstackhub@gmail.com",
+                "ADMIN_EMAIL_PW":"",
+                "EMAIL_SERVICE":"Gmail",
+                "FROM_EMAIL":"yassermumtaz@yahoo.com",
+                "PORT":"3000"
+            },
+            "env_production": {
+                "NODE_ENV": "production",
+                "ADMIN_EMAIL":"fullstackhub@gmail.com",
+                "ADMIN_EMAIL_PW":"",
+                "EMAIL_SERVICE":"Gmail",
+                "FROM_EMAIL":"mazhar_rawalpindi@yahoo.com",
+                "PORT":"5001"
+            }
+        }
+    ]
+}

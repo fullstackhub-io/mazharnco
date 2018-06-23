@@ -8,8 +8,8 @@
       </mat-grid-tile>
       <mat-grid-tile [colspan]=8>
         <div class="socail_btn_padding">
-          <img src="assets/images/fb_btn1.jpg" class="socail_btn image" />
-          <img src="assets/images/skype_btn1.jpg" class="socail_btn image" />
+        <a target="_blank" href="https://www.facebook.com/mazhar.mahmood.16"><img src="assets/images/fb_btn1.jpg" class="socail_btn image" /></a>
+        <a href="skype:plug-shop?mazharmahmood786"><img src="assets/images/skype_btn1.jpg" class="socail_btn image" /></a>
           <img src="assets/images/twtr_btn1.jpg" class="socail_btn image" />
           <img src="assets/images/lkdin_btn1.jpg" class="socail_btn image" />
         </div>
@@ -35,36 +35,36 @@
     </mat-grid-tile>
   </mat-grid-list>
   <div>
-    <nav class="navbar navbar-default" style="box-shadow: 5px 5px 8px #bfc4cc;">
+    <nav class="navbar navbar-default navbar_shadow">
       <div class="container-fluid">
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav navbar-nav">
-            <li><a href="#">Home</a></li>
+            <li><a [routerLink]="['home']">Home</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Services <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Management Consulting</a></li>
-                <li><a href="#">Information Technology Solutions</a></li>
-                <li><a href="#">Tax Compilance</a></li>
-                <li><a href="#">Corporate Compilance</a></li>
-                <li><a href="#">ISO Quality Services</a></li>
-                <li><a href="#">Pre-Job Training</a></li>
-                <li><a href="#">On-Job Training</a></li>
-                <li><a href="#">Audit</a></li>
-                <li><a href="#">Application Management</a></li>
+                <li><a [routerLink]="['page', 'divsmc']">Management Consulting</a></li>
+                <li><a [routerLink]="['page', 'divits']">Information Technology Solutions</a></li>
+                <li><a [routerLink]="['page', 'divtx']">Tax Compilance</a></li>
+                <li><a [routerLink]="['page', 'divcc']">Corporate Compilance</a></li>
+                <li><a [routerLink]="['page', 'diviso']">ISO Quality Services</a></li>
+                <li><a [routerLink]="['page', 'divprt']">Pre-Job Training</a></li>
+                <li><a [routerLink]="['page', 'divojt']">On-Job Training</a></li>
+                <li><a [routerLink]="['page', 'divadt']">Audit</a></li>
+                <li><a [routerLink]="['page', 'divam']">Application Management</a></li>
               </ul>
             </li>
-            <li><a href="#">Our Clients</a></li>
+            <li><a [routerLink]="['page', 'divClient']">Our Clients</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">About Us <span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Our Team</a></li>
+                <li><a [routerLink]="['page', 'divAbout']">About Us</a></li>
+                <li><a [routerLink]="['page', 'divTeam']">Our Team</a></li>
               </ul>
             </li>
-            <li><a href="#">Contact</a></li>
+            <li><a [routerLink]="['contact']">Contact Us</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <form class="navbar-form navbar-left">
@@ -85,8 +85,6 @@
   </div>
 
   <div style="padding-top: 30px">
-    <!-- 33.593742, 73.050849 -->
-    <!-- AIzaSyCKHGctDoGx1_YdAbRsPlJYQqlQeC6kR2E -->
     <mat-card>
       <mat-card-header class="header">
         <div mat-card-avatar class="vst_img"></div>
