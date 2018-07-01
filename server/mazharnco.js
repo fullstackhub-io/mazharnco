@@ -15,6 +15,16 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const contacts = require('./routes/contact');
+const mongoose = require('mongoose');
+const config = require('./config/database');
+
+mongoose.connect(config.database, function (err) {
+    if (err) {
+        console.log('Not connected to the database: ' + err);
+    } else {
+        console.log('Successfully connected to MongoDB');
+    }
+});
 
 var app = express();
 

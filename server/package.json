@@ -8,6 +8,7 @@
     "cors": "^2.8.4",
     "ejs": "^2.5.7",
     "express.js": "^1.0.0",
+    "mongoose": "^5.1.6",
     "nodemailer": "^4.6.0"
   },
   "devDependencies": {},
