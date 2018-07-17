@@ -51,13 +51,15 @@ import { ContactComponent } from './client/contact/contact.component';
 import { DataService } from './service/data/data.service';
 import { Util } from "./shared/util";
 import { ViewPageComponent } from './client/view-page/view-page.component';
+import { FooterComponent } from './footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     ContactComponent,
-    ViewPageComponent
+    ViewPageComponent,
+    FooterComponent
   ],
   imports: [
     HttpModule,

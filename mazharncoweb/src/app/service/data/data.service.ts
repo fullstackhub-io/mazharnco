@@ -13,6 +13,11 @@ export class DataService {
 
   constructor(public _http_unsecure: Http) { }
 
+  get(url: string): Observable<any> {
+    return this._http_unsecure.get(this.SERVER_URL + url)
+    .map((response: Response) => <any>response.json());
+  }
+
   post(url: string, model: any): Observable<any> {
     let body = JSON.stringify(model);
     let headers = new Headers({ 'Content-Type': 'application/json' });

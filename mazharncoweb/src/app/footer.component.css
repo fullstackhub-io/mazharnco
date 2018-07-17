@@ -1,0 +1,105 @@
+.mat-dialog-container {
+    padding: 0 !important;
+    margin: 0 !important;
+    }
+  
+  
+  .map_div{
+      padding-top: 10px;
+  }
+  .vst_img{
+      width: 48px;
+      height: 48px;
+      background-image: url("../assets/images/visitus.png");
+       box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      background-size: cover;
+    }
+  .header{
+  background: #45484d;
+  border-bottom: 5px solid #393B3E;
+  height: 50px;
+  padding-left: 5px;
+  }
+  .header_title{
+      vertical-align:baseline;
+      padding-top: 10px;
+      padding-bottom: 0px;
+      padding-left: 5px;
+      font-size: 16pt;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #A1A9AF;
+  }
+  mat-card{
+    margin: 0px !important;;
+    padding: 0px !important;;
+  }
+  mat-card-content{
+    margin: 0px;
+    padding: 0px;
+  }
+  agm-map {
+      height: 335px;
+    }
+  .map_div{
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+    }
+  .lgn_btn
+    {
+      width: 100%;
+      max-width: 150px;
+      height: auto;
+      cursor: pointer;
+    }
+  .bannerStyle h1 {
+      background-color: #ccc;
+      min-height: 300px;
+      text-align: center;
+      line-height: 300px;
+  }
+  .address{
+    font-family: "Segoe UI", Frutiger, "Frutiger Linotype", "Dejavu Sans", "Helvetica Neue", Arial, sans-serif;
+      font-size: 14px;
+      font-style: normal;
+      font-variant: normal;
+    font-weight: 500;
+    color: #393B3E;
+  }
+  .address_card_content{
+    padding-top: 10px; 
+    padding-bottom: 10px;
+  }
+  
+  .address_card_content_div{
+    height: 350px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  a {
+    color: #425D84;
+    text-decoration: none;
+  }
+  .main_footer{
+      color: #B4BAC3;
+      vertical-align: bottom;
+      background-color: #575A5C;
+      height: 55px;
+      text-align: center;
+      background-clip: content-box;
+      padding-top: 0px;
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-bottom: 15px;
+  }  
+  .main_footer_cred{
+      color: #ffffff;
+      margin-top: 5px;
+      background-color: #535658;
+      height: 55px;
+      text-align: center;
+      background-clip: content-box;  
+  }  
+  
+  

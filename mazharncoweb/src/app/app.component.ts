@@ -1,39 +1,41 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { NgxCarousel, NgxCarouselStore } from 'ngx-carousel';
 import { MouseEvent } from '@agm/core';
+import { MatDialog } from "@angular/material/dialog";
+import { Router } from "@angular/router";
+import { DataService } from "./service/data/data.service";
+import { IMenu } from "./model/menu";
+import { FormGroup, Validators, FormBuilder } from "@angular/forms";
 
-interface marker {
-  lat: number;
-  lng: number;
-  label?: string;
-  draggable: boolean;
-}
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  encapsulation: ViewEncapsulation.None
 })
 
 export class AppComponent implements OnInit {
 
+  GET_ALL_URL: string = "/api/menu";
+  mainMenus: IMenu[];
+  menus: IMenu[];
+
+  searchFrm: FormGroup;
+
   public carouselBanner: NgxCarousel;
   title = 'app';
 
-  zoom: number = 8;
-  lat: number = 33.593742;
-  lng: number = 73.050849;
-
-  markers: marker[] = [
-    {
-      lat: 33.593742,
-      lng: 73.050849,
-      label: 'A',
-      draggable: false
-    }
-  ];
+  constructor(private _fb: FormBuilder,
+              private dialog: MatDialog,
+              private _dataService: DataService,
+    private router: Router) { }
 
   ngOnInit() {
+    this.searchFrm = this._fb.group({
+      TextSearch: ['', [Validators.minLength(3)]]
+    });
+
     this.carouselBanner = {
       grid: { xs: 1, sm: 1, md: 1, lg: 1, all: 0 },
       slide: 2,
@@ -73,6 +75,15 @@ export class AppComponent implements OnInit {
       loop: true,
       touch: true
     }
+
+    this._dataService.get(this.GET_ALL_URL)
+      .subscribe(menus => { this.menus = menus.data;alert(JSON.stringify(this.menus)); this.mainMenus =this.menus!=null?this.menus.filter(x => x.MenuType == 'Main'):null; }
+      );
+
   }
 
+  getChildMenu(menuCode) {
+    return this.menus.filter(x => x.ParentMenuCode == menuCode)
+  }
+  
 }

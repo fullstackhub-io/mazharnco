@@ -15,6 +15,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const contacts = require('./routes/contact');
+const menus = require('./routes/menu');
 const mongoose = require('mongoose');
 const config = require('./config/database');
 
@@ -35,6 +36,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
 app.use("/api", contacts);
+app.use("/api", menus);
 
 app.get('*', function (req, res) {
     res.render(path.join(__dirname, './views/index.html')); // load our public/index.html file

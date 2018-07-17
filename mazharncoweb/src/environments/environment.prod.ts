@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  api_url:"https://fullstackhub.io"
+  api_url:"http://mazharnco.com"
 };

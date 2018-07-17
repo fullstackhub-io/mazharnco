@@ -1,0 +1,52 @@
+<div style="padding-top: 30px">
+  <mat-card>
+    <mat-card-header class="header">
+      <div mat-card-avatar class="vst_img"></div>
+      <mat-card-title class="header_title">Visit Us</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="address_card_content">
+      <div class="address_card_content_div">
+        <div class="col-md-6">
+          <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [disableDefaultUI]="false" [zoomControl]="false">
+            <agm-marker *ngFor="let m of markers; let i = index" [latitude]="m.lat" [longitude]="m.lng" [label]="m.label">
+              <agm-info-window>
+                <strong>Mazhar & Co. Office # 19, First Floor, Mall Plaza, Mall Road                                                                                    
+                Rawalpindi, Pakistan  </strong>
+              </agm-info-window>
+            </agm-marker>
+          </agm-map>
+        </div>
+        <div class="col-md-1"></div>
+        <div class="col-md-5 address">
+          Email:<a href="mailto:mazhar_rawalpindi@yahoo.com"> mazhar_rawalpindi@yahoo.com</a>
+          <br>Website: <a href="http://www.mazharnco.com"> www.mazharnco.com</a>
+          <br> Skype: <a href="skype:plug-shop?mazharmahmood786"> mazharmahmood786</a>
+          <br> Cell: <a href="tel:+92 333 5104584"> +92 333 5104584</a>
+          <br> Tel: <a href="tel:+92 51 5680138"> +92 51 5680138</a> & <a href="tel:+92 51 2291858"> +92 51 2291858</a>            <br>
+          <hr><b> Head Office:</b>
+          <br> Office # 19, First Floor, Mall Plaza, Mall Road
+          <br> Rawalpindi, Pakistan
+          <br> Tel & Fax:
+          <a href="tel:+92 51 5562241"> +92 51 5562241 </a><br>
+          <hr><b> Branch office: </b>
+          <br> H # 24, St # 54, F-11/3
+          <br> Islamabad, Pakistan
+          <br> Tel: <a href="tel:+92 51 2291858"> +92 51 2291858</a><br>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions class="main_footer">
+      <div>
+        <div>
+          © 2018 Mazhar & Co. All Rights Reserved.
+          <button mat-button>Privacy Policy</button>
+          <button mat-button>Contact Us</button>
+        </div>
+        <div class="main_footer_cred">
+          Designed and Developed by <a style="color:#bfc4cc" href="https://fullstackhub.io" target="_blank"> Fullstack Hub</a>
+        </div>
+      </div>
+    </mat-card-actions>
+  </mat-card>
+</div>
+<br>
